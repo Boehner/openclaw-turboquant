@@ -1,0 +1,9 @@
+{
+  "name": "turboquant",
+  "version": "1.0.0",
+  "description": "TurboQuant-inspired context compression for OpenClaw — fewer tokens, lower cost, faster responses",
+  "author": "AIWireDaily",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": ["openclaw", "plugin", "compression", "context", "tokens", "turboquant"]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "turboquant",
+  "name": "TurboQuant Context Compression",
+  "version": "1.0.0",
+  "description": "Compresses conversation history before every API call — fewer tokens sent, lower cost, faster responses. Inspired by Google's TurboQuant KV-cache compression research.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable context compression"
+      },
+      "keepRecentTurns": {
+        "type": "number",
+        "default": 6,
+        "description": "Number of most recent turns to keep verbatim (not compressed)"
+      },
+      "compressionRatio": {
+        "type": "number",
+        "default": 0.25,
+        "description": "Target compression ratio for old turns (0.25 = keep 25% of tokens)"
+      },
+      "minTurnsBeforeCompression": {
+        "type": "number",
+        "default": 10,
+        "description": "Don't compress until conversation has at least this many turns"
+      }
+    }
+  },
+  "uiHints": {
+    "keepRecentTurns": {
+      "label": "Recent Turns (uncompressed)",
+      "placeholder": "6"
+    },
+    "compressionRatio": {
+      "label": "Compression Ratio",
+      "placeholder": "0.25"
+    },
+    "minTurnsBeforeCompression": {
+      "label": "Min turns before compressing",
+      "placeholder": "10"
+    }
+  }
+}
