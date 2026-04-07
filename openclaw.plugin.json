@@ -1,5 +1,5 @@
 {
-  "id": "turboquant",
+  "id": "openclaw-turboquant",
   "name": "TurboQuant Context Compression",
   "version": "1.0.0",
   "description": "Compresses conversation history before every API call — fewer tokens sent, lower cost, faster responses. Inspired by Google's TurboQuant KV-cache compression research.",
